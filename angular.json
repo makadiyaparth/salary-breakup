@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular-tailwind-template": {
+    "salary-breakup": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-builders/custom-webpack:browser",
           "options": {
-            "outputPath": "dist/angular-tailwind-template",
+            "outputPath": "dist/salary-breakup",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -68,18 +68,18 @@
         "serve": {
           "builder": "@angular-builders/custom-webpack:dev-server",
           "options": {
-            "browserTarget": "angular-tailwind-template:build"
+            "browserTarget": "salary-breakup:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "angular-tailwind-template:build:production"
+              "browserTarget": "salary-breakup:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular-tailwind-template:build"
+            "browserTarget": "salary-breakup:build"
           }
         },
         "test": {
@@ -119,16 +119,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "angular-tailwind-template:serve"
+            "devServerTarget": "salary-breakup:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "angular-tailwind-template:serve:production"
+              "devServerTarget": "salary-breakup:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "angular-tailwind-template"
+  "defaultProject": "salary-breakup"
 }

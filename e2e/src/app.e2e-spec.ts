@@ -1,4 +1,5 @@
 import { browser, logging } from 'protractor';
+
 import { AppPage } from './app.po';
 
 describe('workspace-project App', () => {
@@ -10,14 +11,16 @@ describe('workspace-project App', () => {
 
   it('should display welcome message', async () => {
     await page.navigateTo();
-    expect(await page.getTitleText()).toEqual('angular-tailwind-template app is running!');
+    expect(await page.getTitleText()).toEqual('salary-breakup app is running!');
   });
 
   afterEach(async () => {
     // Assert that there are no errors emitted from the browser
     const logs = await browser.manage().logs().get(logging.Type.BROWSER);
-    expect(logs).not.toContain(jasmine.objectContaining({
-      level: logging.Level.SEVERE,
-    } as logging.Entry));
+    expect(logs).not.toContain(
+      jasmine.objectContaining({
+        level: logging.Level.SEVERE,
+      } as logging.Entry)
+    );
   });
 });
