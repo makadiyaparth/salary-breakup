@@ -1,1 +1,27 @@
+<div class="container mx-auto">
+  <div
+    class="flex flex-col items-center md:flex-row md:justify-between md:items-center mx-3 md:mx-5 lg:mx-6 my-2 md:my-3 lg:my-4">
+    <h1 class="text-2xl md:text-3xl lg:text-4xl tracking-wider text-gray-700">Salary Breakup</h1>
+    <div class="flex justify-between mt-2 md:mt-0">
+      <app-display-price [price]="100000" [label]="'Net Salary'"></app-display-price>
+      <app-display-price [price]="2000" [label]="'Net Tax'" class="ml-6 lg:ml-10"></app-display-price>
+    </div>
+  </div>
 
+  <div class="flex justify-center mt-6 md:hidden">
+    <select name="menu" class="nav-dropdown w-full mx-6" (change)="navigate($event)">
+      <option value="dashboard">Dashboard</option>
+      <option value="basic-structure">Basic Structure</option>
+      <option value="tax-exemption">Tax Exemptions</option>
+      <option value="tax-deduction">Tax Deductions</option>
+      <option value="taxes">Taxes</option>
+    </select>
+  </div>
+  <div class="hidden md:block">
+    <app-navigation></app-navigation>
+  </div>
+
+  <div class="mt-6 md:mt-10 mx-2 md:mx-6">
+    <router-outlet></router-outlet>
+  </div>
+</div>

@@ -1,1 +1,9 @@
-<p>tax-exemptions works!</p>
+<div class="flex flex-col items-center">
+  <ng-container *ngIf="records?.length > 0; else noRecord">
+    <app-display-record *ngFor="let record of records" [record]="record"></app-display-record>
+  </ng-container>
+</div>
+
+<ng-template #noRecord>
+  <div class="text-gray-500">No Records</div>
+</ng-template>

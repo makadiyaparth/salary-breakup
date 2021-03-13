@@ -7,6 +7,13 @@ import { BasicStructureComponent } from './components/basic-structure/basic-stru
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { TaxDeductionsComponent } from './components/tax-deductions/tax-deductions.component';
 import { TaxExemptionsComponent } from './components/tax-exemptions/tax-exemptions.component';
+import { SharedModule } from './shared/shared.module';
+import { NavigationComponent } from './components/navigation/navigation.component';
+import { DisplayPriceComponent } from './components/common/display-price/display-price.component';
+import { PricePipe } from './pipes/price.pipe';
+import { TaxesComponent } from './components/taxes/taxes.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { DisplayRecordComponent } from './components/common/display-record/display-record.component';
 
 @NgModule({
   declarations: [
@@ -15,8 +22,14 @@ import { TaxExemptionsComponent } from './components/tax-exemptions/tax-exemptio
     BasicStructureComponent,
     TaxDeductionsComponent,
     TaxExemptionsComponent,
+    NavigationComponent,
+    DisplayPriceComponent,
+    PricePipe,
+    TaxesComponent,
+    PageNotFoundComponent,
+    DisplayRecordComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, SharedModule],
   providers: [],
   bootstrap: [AppComponent],
 })
